@@ -1,13 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import Chart from 'chart.js';
-
 // core components
-import {
-  chartOptions,
-  parseOptions,
-  chartExample1,
-  chartExample2
-} from "../../variables/charts";
+import {chartExample1, chartExample2, chartOptions, parseOptions} from '../../variables/charts';
 
 @Component({
   selector: 'app-dashboard',
@@ -22,7 +16,8 @@ export class DashboardComponent implements OnInit {
   public clicked: boolean = true;
   public clicked1: boolean = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
 
@@ -47,14 +42,11 @@ export class DashboardComponent implements OnInit {
     var chartSales = document.getElementById('chart-sales');
 
     this.salesChart = new Chart(chartSales, {
-			type: 'line',
-			options: chartExample1.options,
-			data: chartExample1.data
-		});
+      type: 'line',
+      options: chartExample1.options,
+      data: chartExample1.data
+    });
   }
-
-
-
 
 
   public updateOptions() {
